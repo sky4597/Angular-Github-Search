@@ -20,10 +20,16 @@ export class GithubFollowersComponent implements OnInit {
 
 updateParent(input:FormControl){
   if(input.valid)
-  this.parent.title=this.uname+"'s followers!";
-  else {this.parent.title= "Followers appear below!";
-  this.followers=[];}
-  if(input.valid)
-  this.service.getAll(this.uname).subscribe(followers=>this.followers=followers);
+  {
+    this.parent.title=this.uname+"'s followers!";
+    this.service.getAll(this.uname).subscribe(followers=>this.followers=followers);
+  }
+  else 
+  {
+    this.parent.title= "Followers appear below!";
+    this.followers=[];
+  }
+
+  
 }
 }
