@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FavoriteChangedEventArgs } from "./favorite.component";
+
 
 
 
@@ -23,10 +23,6 @@ export class AppComponent {
   }
   
 
-   onFavoriteChanged(eventArgs:{newValue:FavoriteChangedEventArgs}) {
-     
-    console.log(" isFavorite was toggled: ",eventArgs);
-    
-  }
+
  
 }

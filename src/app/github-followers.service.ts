@@ -4,6 +4,9 @@ import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from "rxjs/Observable";
 import { NotFoundError } from './common/not-found-error';
+import "rxjs/add/operator/map";
+import "rxjs/add/operator/catch";
+
 
 @Injectable()
 export class GithubFollowersService  {

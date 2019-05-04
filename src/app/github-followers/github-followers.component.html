@@ -1,15 +1,19 @@
 <form>
-<input type="text" class="form form-control" #f="ngModel" required name="input1" (change)="updateParent(f)" [(ngModel)]="uname" placeholder="Enter github username">
-<label for=""></label>
-
-<div *ngIf="f.touched&&f.invalid" class="alert alert-danger">
-  Please enter a value!
-</div>
-<div  *ngFor="let follower of followers" class="media">
-  <img src="{{ follower.avatar_url }}" class="mr-3 avatar" alt="...">
-  <div class="media-body">
-    <h5 class="mt-0">{{ follower.login }}</h5>
-    <a href="{{follower.html_url}}  ">{{ follower.html_url }}</a>
+  <input type="text" class="form form-control" #f="ngModel" required name="input1" (change)="updateParent(f)" [(ngModel)]="uname" placeholder="Enter github username">
+  <label for=""></label>
+  
+  <div *ngIf="f.touched&&f.invalid" class="alert alert-danger">
+    Please enter a value!
   </div>
-</div>
-</form> 
+  <div class="container">
+  <div  *ngFor="let follower of followers" class="media item align">
+   
+    <img src="{{ follower.avatar_url }}" class="mr-3 avatar " alt="...">
+    <div class="media-body">  
+      <h5 class="mt-0">{{ follower.login }}</h5>
+      <a href="{{follower.html_url}}  ">{{ follower.html_url }}</a>
+    </div>
+  
+   </div></div>
+  
+  </form>
