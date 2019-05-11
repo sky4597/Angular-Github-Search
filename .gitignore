@@ -44,3 +44,4 @@ testem.log
 Thumbs.db
 .vs/slnx.sqlite
 .editorconfig
+.firebase
